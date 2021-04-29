@@ -54,3 +54,4 @@ print(a[1:6])
 a = input()
 b = a[-1]+a[:-1]
 print(b)
+
