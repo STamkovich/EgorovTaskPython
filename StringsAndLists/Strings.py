@@ -118,3 +118,18 @@ print(b.replace('','.').rstrip('.'))
 x = input().lower()
 x = x[0:7:2]+x[7::2]
 print('.'+'.'.join(x))
+# Форматирование строк Python. Метод format
+# Позиционное использование метода format()
+name = 'Андрей'
+mid_name = 'Михайлович'
+balance = 107
+
+text = '''Дорогой {0} {1}, баланс вашего лицевого счёта состовляет {2} руб.'''.format(name, mid_name, balance)
+print(text)
+# именовонное использование переменных
+name = 'Андрей'
+mid_name = 'Михайлович'
+balance = 107
+
+text = '''Дорогой {n} {m}, баланс вашего лицевого счёта состовляет {d} руб.'''.format(n=name, m=mid_name, d=balance)
+print(text)
