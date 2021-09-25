@@ -101,7 +101,6 @@ primer()
 # Зачем нужны функции в программировании!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-
 def summa_n(t):
     s = 0
     for i in range(1, t + 1):
@@ -173,18 +172,18 @@ def drewSquare(a):
     for i in range(4):
         move(a)
 
+
 def drewSquareColor(a, color):
     turtle.color(color)
     turtle.begin_fill()
     drewSquare(a)
     turtle.end_fill()
 
+
 turtle.speed(3)
 
 drewSquareColor(60, 'red')
 turtle.goto(150, 150)
 drewSquareColor(120, 'blue')
-
-# Возвращаемое значение функции. Оператор return
 
 
