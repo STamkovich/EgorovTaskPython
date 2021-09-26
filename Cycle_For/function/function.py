@@ -187,3 +187,66 @@ turtle.goto(150, 150)
 drewSquareColor(120, 'blue')
 
 
+# Передача аргументов. Сопоставление аргументов по имени и позиции
+def f(a, b):
+    print(id(a), id(b), 'local')
+    a = 100
+    b = 200
+    print(a, b, 'local')
+
+
+c = 20
+d = 50
+f(c, d)  # во время передачи происходит автоматическое присвоение
+print(c, d, 'global')
+print(id(c), id(d), 'global')
+
+
+# варианты вызова функции
+def e(a, b, c):
+    print(a, b, c)
+
+
+# 1) позиционный
+e(1, 5, 7)
+# 2) по имени
+e(b=10, c=20, a=5)
+# комбинированный вариант
+e(2, c=10, b=20)  # сначала позиционный аргументы потом именнованные
+
+
+def t(a, b='None', o='неизвестно'):
+    print(a, b, o)
+
+
+t(1)
+t(2, 3)
+t(2, 3, 4)  # с перезапишиться
+
+
+# ОЧЕНЬ ВАЖНО
+# не используйте изменеяемые объекты в качетве значенией по умолчанию
+def append_to_list(value, my_list=None):
+    if my_list is None:
+        my_list = []
+    my_list.append(value)
+    print(my_list)
+
+
+a = [1, 2, 4]
+append_to_list(10, [2, 3, 4])
+append_to_list(10, a)
+append_to_list(15, a)
+append_to_list(77)
+
+
+def append_to_dict(key, value, my_dict=None):
+    if my_dict is None:
+        my_dict = {}
+
+    my_dict[key] = value
+    print(my_dict)
+
+append_to_dict(10, 100)
+append_to_dict(10, 15)
+append_to_dict(20, 200, {'a': 100})
