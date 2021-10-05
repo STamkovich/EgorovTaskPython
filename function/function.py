@@ -247,6 +247,36 @@ def append_to_dict(key, value, my_dict=None):
     my_dict[key] = value
     print(my_dict)
 
+
 append_to_dict(10, 100)
 append_to_dict(10, 15)
 append_to_dict(20, 200, {'a': 100})
+
+# Вложенные функции в Python
+g = 'gray'
+
+
+def colors(param='r'):
+    y = 'yelow'
+    g = 'green'
+
+    def print_red():
+        r = 'red'
+        print(r)
+        y = ' was change'
+
+    def print_blue():
+        b = 'blue'
+        print(b)
+
+    if param == 'r':
+        print_red()
+    elif param == 'b':
+        print_blue()
+    else:
+        print('i do know this color')
+
+
+colors('r')
+
+
