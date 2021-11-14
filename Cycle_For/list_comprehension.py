@@ -7,6 +7,8 @@ print(a)
 a = [i % 4 for i in range(1, 15)]
 print(a)
 a = [i for i in 'hello']
+import os
+pppp = os.getpid()
 print(a)
 # шабло [выражение for val in коллекция if условие]
 b = [elem for elem in a if elem % 2 == 0 and elem]
