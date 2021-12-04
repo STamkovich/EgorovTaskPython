@@ -1,1 +1,1 @@
-# EgorovTaskPython
+LearningPython
