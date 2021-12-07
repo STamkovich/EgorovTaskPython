@@ -7,7 +7,7 @@
 # Для этого есть фунция Open
 # Откроем переменную file:
 # у вас вместо test.txt ваше название файла.
-file = open('test')
+file = open('holy')
 # Теперь мы можем работать с этой переменной file
 # И первоем что мы можем сделать это прочитать содержимое блокнота – print(file.read())
 # Если у вас в блокноте была кириллица и файл выдал всякую белеберду то сделайте так:
@@ -72,5 +72,19 @@ def create_file_with_numbers(n):
 # И также учитывайте, что слова в тестах будут как на русском языке, так и на английском
 # Все возможные знаки пунктуации можно получить из модуля string
 # from string import punctuation
+from string import punctuation
+
+def longest_word_in_file(file_name):
+    f = open(file_name, encoding='utf-8')
+    l = ''
+    for i in f.read().split():
+        i = i.strip()
+        for j in i:
+            if j in punctuation:
+                i = i.replace(j, '')
+        if len(i) >= len(l):
+            l = i
+    f.close()
+    return l
 
 
