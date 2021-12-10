@@ -1,5 +1,4 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+days = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve']
 
-n = list(map(lambda x: x ** 2, numbers))
-m = list(map(lambda x: x ** 3, numbers))
-print(n, m, sep='\n')
+a2 = sorted(list(filter(lambda x: len(x) == 4 or x[0] == "S", days)))
+print(*a2, sep='\n')
