@@ -192,7 +192,7 @@ words = {}
 while True:
     s = input()
     if s in words:
-        print("Слово", s, 'переаодится как', words[s])
+        print("Слово", s, 'переводится как', words[s])
     else:
         print('Введите перевод слова', s)
         words[s] = input()
