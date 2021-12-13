@@ -415,6 +415,14 @@ while i * i <= n:
     i += 1
 a.sort()
 print(a)
+                                        # нахождения НОК
+a, b = 75, 120
+i = min(a, b)
+while True:
+    if i % a == 0 and i % b == 0:
+        break
+    i += 1
+print(i)
 # задачки
 # Дано натуральное число N.
 # Определить, является ли оно простым.
@@ -444,7 +452,7 @@ while i > 0:
         e.append(i)
     i -= 1
 print(sum(e))
-                                    # Инструкции break, continue, elsei = 1
+                                  # Инструкции break, continue, elsei = 1
 while True:
     print("интерация", i)
     if i == 10:
